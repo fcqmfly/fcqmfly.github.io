@@ -1,3 +1,5 @@
+markdown: rdiscount
+pygments: true
 source:      .
 destination: ./_site
 plugins:     ./_plugins
