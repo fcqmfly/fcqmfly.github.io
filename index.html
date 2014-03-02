@@ -3,3 +3,9 @@
 {% for each in range(4) %}
   each
 {% endfor %}
+<ul>
+{% for post in site.posts  %}
+	<li style=" text-align:left"> <a href={{post.url  }}>{{ post.title  }} </a> <span class='date' style="float:right"  >{{post.date | date_to_string}}</span>
+{% endfor %}
+
+</ul>
