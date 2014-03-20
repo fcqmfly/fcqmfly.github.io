@@ -1,47 +1,6 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
-<head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <link rel='alternate' type='application/rss+xml' title='atom 1.0' href='/feed' />
-    <title>{% block title %} {% endblock %}</title>
-</head>
-<body>
-
-<div id="page">
-
-    {% set title= site.configs.title or site.title%}
-
-    <div id='head'>
-        <div class="ribbon_1"> </div>
-        <div class="site">
-            <h1>
-                <a href="/">
-                    {{ title}}
-                </a>
-            </h1>
-        </div>
-        <img src='{{site.avatar}}?s=100' alt='avatar' class="rounded_img" />
+	<div id="footer">
+      <p>©2014 fcqm@fly</p>
     </div>
-
-    {% block content %}
-    {% endblock %}
-
-
-    {% include 'include/footer.html' %}
-
-</div>
-
-{% set bg=get_one_image('/backgrounds') %}
-{% if not bg %}
-    {% set bg=get_one_image('/') %}
-{% endif %}
-
-{% if bg %}
-    <img src='{{ bg.url }}?blur=true' alt='bg' id="background"/>
-{% endif %}
-
 
 </body>
 </html>
-
-
